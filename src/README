@@ -1,0 +1,21 @@
+# tema1
+
+Nadolu Robert-Alexandru
+334CB
+
+Pentru a implementa paraleliza algoritmul am initializat in primul rand o structura 
+cu scopul de a retine anumite informatii despre thread-uri cum ar fi id-ul, numarul
+total de thread-uri, alti parametri ce m-au ajutat in paralelizarea
+tuturor functiilor (grid, contour_map si scaled_image) si bariera, pe care
+le transmit drept argumente in functia *marching_squares care realizeaza
+paralelizarea. Am mutat toate functiile( init, rescale, grid si march ) 
+in marching_squares si am urmat pasii din laborator pentru a paraleliza
+fiecare functie in parte. 
+
+Singurul element de sincronizare pe care l-am folosit a fost bariera, pe care 
+am apelat-o de multiple ori de-alungul functiei pentru a nu se suprascrie anumite instructiuni. 
+Alocarile de memorie le-am facut in thread-ul principal. De asemenea am introdus si 
+fisierele de input si output in structura de thread-uri pentru a le pasa in functie, iar 
+mai apoi in main ca argumente.
+
+
